@@ -1,0 +1,131 @@
+/* -- GENERAL STYLLE -- */
+@font-face {
+    font-family: Yekan;
+    src: url(../fonts/Yekan.ttf);
+}
+.dialogWrapper{
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    direction: ltr;
+}
+.dialogBox{
+    display: none;
+    position: relative;
+    margin:30px auto;
+    width: 300px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.dialogHeader{
+    box-sizing: border-box;
+    height: 45px;
+    padding: 10px 15px;
+ 
+}
+.dialogTitle{
+    margin:0;
+    height: 20px;
+    line-height: 20px;
+
+}
+.dialogBody{
+    box-sizing: border-box;
+    min-height: 75px;
+    padding: 15px;
+    font-size: 16px;
+}
+.dialogFooter{
+    box-sizing: border-box;
+    height: 60px;
+    padding: 10px;
+    font-size: 16px;
+}
+.btns{
+    display: inline-block;
+    border:0;
+    outline: 0;
+    padding: 5px;
+    border-radius: 4px;
+    min-width: 70px;
+    font-size:16px;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: center;
+    margin:0px 2px;
+}
+
+
+/* -- WHITE THEME -- */
+div.white {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+div.white .dialogBox{
+    background-color: white;
+    color: #5a5a5a;
+}
+div.white .dialogHeader, div.white .dialogBody{
+    border-bottom: 1px solid #e5e5e5;
+}
+div.white .btns{
+    background-color: white;
+    color: rgb(138, 137, 137);
+    border:1px solid #ccc
+}
+div.white .btns:hover{
+    background-color: rgb(210, 245, 250);
+    border-color: #e5e5e5;
+    color:rgba(92, 92, 100, 0.74);
+
+}
+/* -- DARK THEME -- */
+div.dark {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+div.dark .dialogBox{
+    background-color: #707070;
+    color: white;
+}
+div.dark .dialogHeader, div.dark .dialogBody{
+    border-bottom: 1px solid #e5e5e5;
+}
+div.dark .btns{
+    background-color: rgb(95, 95, 95);
+    color: white;
+    border:1px solid #ccc
+}
+div.dark .btns:hover{
+    background-color: rgb(210, 245, 250);
+    border-color: #e5e5e5;
+    color:rgba(92, 92, 100, 0.74);
+
+}
+/* -- RIGHT TO LEFT -- */
+div.drtl{
+    direction: rtl;
+    text-align: right;
+    font-family: Yekan, sans-serif;
+}
+div.drtl .btns{
+    float: left;
+    font-family: Yekan ,sans-serif;
+    font-size: 17px;
+    padding:2px
+}
+/* -- LEFT TO Right -- */
+div.dltr{
+    direction: ltr;
+    text-align:left;  
+}
+div.dltr .btns{
+    float: right;
+}
+

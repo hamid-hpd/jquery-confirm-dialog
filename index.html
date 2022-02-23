@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="css/confirm.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/confirm.js"></script>
+    <style>
+        .parent{
+            width: 100%;
+           height: auto;
+        }
+        pre{
+            display: inline-block;
+            padding: 15px;
+            border:1px solid #8ee1f5;
+            border-radius: 2px;
+            background-color: #f5f5f5;
+        }
+        button{
+            background-color: dodgerblue;
+            color:white;
+            border:0;
+            border-radius: 3px;
+            outline: 0;
+            padding: 5px 12px;
+            font-size:16px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        button:hover{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<h1>CUSTOM CONFIRMATION DIALOG</h1>
+<div class="parent">
+    <div>
+        <h4>Default settings:</h4>
+    </div>
+    <div>
+    <pre>
+        {
+          theme:'white',
+          direction:'dltr',
+          confirmBtn:'ok',
+          cancelBtn:'cancel',
+          title:'Confirm',
+          message:'Are you sure to continue?',
+        }
+    </pre>
+    </div>
+</div>
+<div class="parent">
+    <div>
+        <h4>Simple confirmation</h4>
+        <p> To use default settings just set confirm and cancel properties</p>
+    </div>
+    <div>
+    <pre>
+        $('#btn').click(function(){
+          new Confirm({
+            confirm:function (){
+               //doSomthing
+            },
+            cancel:function (){
+               //doSomthing
+            }
+          });
+        });
+    </pre>
+    </div>
+    <button id="btn1">click</button>
+</div>
+<div class="parent">
+    <div>
+        <h4>Custome confirmation dialog</h4>
+        <p> To customise settings, set any of the properties you want. </p>
+    </div>
+    <div>
+    <pre>
+        $('#btn').click(function(){
+          new Confirm({
+            theme:'dark',
+            confirmBtn:'yes',
+            cancelBtn:'no',
+            confirm:function (){
+               //doSomthing
+            },
+            cancel:function (){
+               //doSomthing
+            }
+          });
+        });
+    </pre>
+    </div>
+    <button id="btn2">click</button>
+</div>
+<div class="parent">
+    <div>
+        <h4>Right to Left</h4>
+        <p> To change the direction to rtl for Farsi and Arabic languages set direction property value to 'drtl'</p>
+    </div>
+    <div>
+    <pre>
+        $('#btn').click(function(){
+          new Confirm({
+           direction:'drtl',
+           confirmBtn:'بله',
+           cancelBtn: 'خیر',
+           title:'تایید',
+           message:'آیا از ادامه کار مطئن هستید؟',
+            confirm:function (){
+               //doSomthing
+            },
+            cancel:function (){
+               //doSomthing
+            }
+          });
+        });
+    </pre>
+    </div>
+    <button id="btn3">click</button>
+</div>
+</body>
+<script>
+    $('#btn1').click(function(){
+       new Confirm({
+           confirm:function (){
+               //alert('confirmed')
+           },
+           cancel:function (){
+               //alert('canceled')
+           }
+       });
+    });
+    $('#btn2').click(function(){
+        new Confirm({
+            theme:'dark',
+            confirmBtn:'yes',
+            cancelBtn:'no',
+            confirm:function (){
+               // alert('confirmed')
+            },
+            cancel:function (){
+                //alert('canceled')
+            }
+        });
+    });
+    $('#btn3').click(function(){
+        new Confirm({
+            direction:'drtl',
+            confirmBtn:'بله',
+            cancelBtn: 'خیر',
+            title:'تایید',
+            message:'آیا از ادامه کار مطئن هستید؟',
+            confirm:function (){
+                //alert('confirmed')
+            },
+            cancel:function (){
+                //alert('canceled')
+            }
+        });
+    })
+</script>
+</html>
